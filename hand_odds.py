@@ -38,18 +38,3 @@ def simulate_play(your_hand,cards_shown,number_of_opponents):
     return determine_winner(hands, board)
 
 
-def hand_odds(your_hand,cards_shown,number_of_opponents, n=20):
-    t = time.time()
-    winners = []
-    for i in range(n):
-        #print(simulate_play(your_hand,cards_shown,number_of_opponents))
-        winners.append(simulate_play(your_hand,cards_shown,number_of_opponents))
-    counter = Counter(winners)
-    print(sorted(counter.items()))
-    print(f'{time.time()-t :.3f}s')
-    print(f'{float(100*Counter(winners)[0]/n):.2f}% chance of winning with {your_hand}')
-
-
-
-
-hand_odds(["14D","14H"],[],4,1000)
