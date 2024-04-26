@@ -1,2 +1,2 @@
 # hand-odds
-A system to perform monte-carlo simulations and determine the probability of winning a poker round given your hand and cards shown.
+Python program to estimate probability of winning a poker round given your current hand, table positioning and river cards shown.
